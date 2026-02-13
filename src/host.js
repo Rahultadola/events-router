@@ -1,3 +1,3 @@
-const hostURL = "http://localhost:3000/router-events";
+const hostURL = "https://combined-express-portfolio.vercel.app/router-events";
 
 export default hostURL;

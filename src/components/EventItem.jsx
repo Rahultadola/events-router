@@ -2,9 +2,13 @@ import classes from './EventItem.module.css';
 
 import { Link, useSubmit } from 'react-router-dom';
 
+import { formatter } from './EventsList.jsx';
+
 function EventItem({ event }) {
 
   const submitAction = useSubmit();
+
+  const d = new Date(event.date)
 
   function startDeleteHandler() {
     const confirm = window.confirm("Are you sure?")
@@ -18,7 +22,7 @@ function EventItem({ event }) {
     <article className={classes.event}>
       <img src={event.image} alt={event.title} />
       <h1>{event.title}</h1>
-      <time>{event.date}</time>
+      <time>{formatter.format(d)}</time>
       <p>{event.description}</p>
       <menu className={classes.actions}>
         <Link to="edit">Edit</Link>

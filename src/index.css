@@ -48,3 +48,10 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+
+.home-description {
+  max-width: 60rem;
+  margin: auto;
+  text-align: justify;
+}
